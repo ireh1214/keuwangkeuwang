@@ -1,0 +1,54 @@
+
+
+::selection{
+    background-color: #333;
+    color: #fff;
+}
+
+@mixin ftR{
+    font-family: "Pretendard-Regular";
+    font-weight: normal;
+}
+@mixin ftT{
+    font-family:"Pretendard-Thin";
+}
+@mixin ftL{
+    font-family:"Pretendard-Light";
+}
+@mixin ftM{
+    font-family:"Pretendard-Medium";
+}
+@mixin ftSB{
+    font-family:"Pretendard-SemiBold";
+}
+@mixin ftB{
+    font-family:"Pretendard-Bold";
+}
+@mixin ftEB{
+    font-family:"Pretendard-ExtraBold";
+}
+
+@mixin txthide {
+    text-indent: -5000000000000000px;
+    overflow: hidden;
+    font-size: 0px;
+    text-align: left;
+}
+
+@mixin txtellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    overflow: hidden;
+}
+@mixin txtellipsisMulti($h:2.4rem, $lh:1.2rem, $l:2) {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $l;
+    /* 라인수 */
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+    overflow: hidden;
+    line-height: $lh;
+    height: $h;
+}
