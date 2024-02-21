@@ -6,10 +6,21 @@ import "../scss/common.scss";
 
 export default function Home() {
   return (
-    <main>
-      컴포넌트 작성
-      <CommonInput />
-      <Title title="안녕하세요! Hello World!" />
-    </main>
+    <>
+      <header>
+        <a href="#">logo</a>
+        <ul>
+          <li>회원가입</li>
+          <li>
+            로그인
+          </li>
+        </ul>
+      </header>
+      <main>
+        컴포넌트 작성
+        {/* <CommonInput />
+      <Title title="안녕하세요! Hello World!" /> */}
+      </main>
+    </>
   );
 }
