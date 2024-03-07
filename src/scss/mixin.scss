@@ -1,54 +1,99 @@
-
-
-::selection{
-    background-color: #333;
-    color: #fff;
+::selection {
+  background-color: #333;
+  color: #fff;
 }
 
-@mixin ftR{
-    font-family: "Pretendard-Regular";
-    font-weight: normal;
+@mixin ftR {
+  font-family: "Pretendard-Regular";
+  font-weight: normal;
 }
-@mixin ftT{
-    font-family:"Pretendard-Thin";
+@mixin ftT {
+  font-family: "Pretendard-Thin";
 }
-@mixin ftL{
-    font-family:"Pretendard-Light";
+@mixin ftL {
+  font-family: "Pretendard-Light";
 }
-@mixin ftM{
-    font-family:"Pretendard-Medium";
+@mixin ftM {
+  font-family: "Pretendard-Medium";
 }
-@mixin ftSB{
-    font-family:"Pretendard-SemiBold";
+@mixin ftSB {
+  font-family: "Pretendard-SemiBold";
 }
-@mixin ftB{
-    font-family:"Pretendard-Bold";
+@mixin ftB {
+  font-family: "Pretendard-Bold";
 }
-@mixin ftEB{
-    font-family:"Pretendard-ExtraBold";
-}
-
-@mixin txthide {
-    text-indent: -5000000000000000px;
-    overflow: hidden;
-    font-size: 0px;
-    text-align: left;
+@mixin ftEB {
+  font-family: "Pretendard-ExtraBold";
 }
 
-@mixin txtellipsis {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
-    overflow: hidden;
+/*
+text 
+*/
+@mixin txtHide {
+  font-size: 0;
 }
-@mixin txtellipsisMulti($h:2.4rem, $lh:1.2rem, $l:2) {
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: $l;
-    /* 라인수 */
-    -webkit-box-orient: vertical;
-    word-wrap: break-word;
-    overflow: hidden;
-    line-height: $lh;
-    height: $h;
+
+/*
+  ellipsis
+  */
+
+/* text ellipsis */
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 
+  flex
+  */
+@mixin flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex_between_column {
+  @include flex_between;
+  flex-direction: column;
+}
+
+@mixin flex_center_column {
+  @include flex_center;
+  flex-direction: column;
+}
+
+@mixin flex_item_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@mixin flex_end_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+@mixin flex_around {
+  display: flex;
+  justify-content: space-around;
+}
+
+@mixin flex_start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/*
+  ico 
+  */
+@mixin iLayout {
+  content: "";
+  display: inline-block;
 }
