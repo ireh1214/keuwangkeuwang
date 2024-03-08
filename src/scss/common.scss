@@ -4,10 +4,9 @@ $main300: #ffd23a;
 $input: #f7f8fa;
 $gray: #999999;
 
-@import 'reset';
-@import 'mixin';
-@import 'component';
-@import 'content';
-@import 'media';
-
-
+@import "reset";
+@import "mixin";
+@import "component";
+@import "layout";
+@import "content";
+@import "media";

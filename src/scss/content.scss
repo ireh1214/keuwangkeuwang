@@ -1,160 +1,139 @@
-header {
-  @include flex_between;
-  align-items: center;
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-  height: 64px;
-
-  h1 {
-    width: 120px;
-    height: 40px;
-    background-color: #eee;
-    color: #333;
-    font-size: 30px;
-    @include flex_center;
-  }
-
-  ul {
-    @include flex_between;
-    gap: 10px;
-    width: 140px;
-
-    li {
-      width: 50%;
-    }
-  }
-}
-
-.slideContainer {
-  width: 100%;
-  height: 300px;
-  background-color: #eee;
-}
-
-.tabMenu {
-  width: 100%;
-  padding: 0 326px;
-  border-bottom: 1px solid #e9e9e9;
-  margin-top: 48px;
-
-  .menuBox {
-    width: auto;
-    display: flex;
-    gap: 10px;
-
-    & > button {
-      position: relative;
-      min-width: 68px;
-      padding-bottom: 18px;
-      font-size: 18px;
-
-      &::before {
-        @include iLayout;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 28px;
-        height: 5px;
-        background-color: #333;
-      }
-    }
-  }
-}
-
-.container {
-  width: 100%;
-  max-width: 1080px;
-  margin: 0 auto;
-
-  section {
-    width: 100%;
-    margin-top: 58px;
-
-    h3 {
-      font-size: 24px;
-      @include ftB;
-    }
-    ul.contentBox {
+.wrap {
+  .home_wrap {
+    .slideContainer {
       width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-top: 26px;
+      height: 300px;
+      background-color: #eee;
+    }
+    .tabMenu {
+      width: 100%;
+      margin-top: 48px;
+      border-bottom: 1px solid #e9e9e9;
 
-      li {
-        width: 18.8%;
-        border: 1px solid #f1f1f1;
-        overflow: hidden;
+      .menuBox {
+        width: 1080px;
+        margin: 0 auto;
+        display: flex;
+        gap: 10px;
 
-        .imgBox {
-          width: 100%;
-          height: 144px;
-          border-radius: 6px;
-          background-color: #eee;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          img {
-            width: 100%;
-            height: 100%;
+        & > button {
+          position: relative;
+          min-width: 68px;
+          padding-bottom: 18px;
+          font-size: 18px;
+
+          &::before {
+            @include iLayout;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 28px;
+            height: 5px;
+            background-color: #333;
           }
         }
-        .infoBox {
+      }
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+
+      section {
+        width: 100%;
+        margin-top: 58px;
+
+        h3 {
+          font-size: 24px;
+          @include ftB;
+        }
+        ul.contentBox {
+          width: 100%;
           display: flex;
-          flex-direction: column;
-          padding: 6px;
-          gap: 6px;
           flex-wrap: wrap;
+          gap: 16px;
+          margin-top: 26px;
+          padding-bottom: 58px;
 
-          div {
-            &:nth-child(1) {
-              display: flex;
-              align-items: center;
-              gap: 5px;
-              img {
-                width: 22px;
-                height: 22px;
-                border-radius: 100%;
-                background-color: #000;
-              }
-              span {
-                font-size: 13px;
-              }
-            }
-            &:nth-child(2) {
+          li {
+            width: 202px;
+            border: 1px solid #f1f1f1;
+            overflow: hidden;
+
+            .imgBox {
               width: 100%;
-              p {
-                @include ftM;
-                width: 100%;
-                font-size: 14px;
-                line-height: 19px;
-                color: #222;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-              }
-            }
-            &:nth-child(3) {
+              height: 144px;
+              border-radius: 6px;
+              background-color: #000;
               display: flex;
               align-items: center;
-              gap: 4px;
-              .hash {
-                @include flex_center;
-                padding: 4px 8px;
-                background-color: #eee;
-                color: #333;
-                font-size: 12px;
-                border-radius: 20px;
-                &::before {
-                  content: "#";
-                  display: inline-block;
-                }
+              justify-content: center;
+              img {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .infoBox {
+              display: flex;
+              flex-direction: column;
+              padding: 6px;
+              gap: 6px;
+              flex-wrap: wrap;
 
-                &.on {
-                  background-color: #333;
-                  color: #fff;
+              div {
+                width: 100%;
+                &:nth-child(1) {
+                  display: flex;
+                  align-items: center;
+                  gap: 5px;
+
+                  img {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 100%;
+                    background-color: #000;
+                  }
+                  span {
+                    font-size: 13px;
+                    @include ellipsis;
+                  }
+                }
+                &:nth-child(2) {
+                  p {
+                    @include ftM;
+                    width: 100%;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #222;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                  }
+                }
+                &:nth-child(3) {
+                  display: flex;
+                  align-items: center;
+                  gap: 4px;
+                  .hash {
+                    @include ellipsis;
+                    max-width: 150px;
+                    padding: 4px 8px;
+                    background-color: #eee;
+                    color: #333;
+                    font-size: 12px;
+                    border-radius: 20px;
+                    &::before {
+                      content: "#";
+                      display: inline-block;
+                    }
+
+                    &.on {
+                      background-color: #333;
+                      color: #fff;
+                    }
+                  }
                 }
               }
             }
@@ -163,7 +142,117 @@ header {
       }
     }
   }
+  .login_wrap {
+    @include flex-center;
 
-  .all_sec {
+    .login_container {
+      width: 440px;
+      padding-top: 60px;
+
+      .login_img {
+        width: 100%;
+        height: 400px;
+        background: url("/img/main/sample2.png") no-repeat center / contain;
+      }
+
+      .inputBox {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+
+        input,
+        button {
+          font-size: 17px;
+          border-radius: 8px;
+          width: 100%;
+          height: 56px;
+        }
+
+        input {
+          box-sizing: border-box;
+          background-color: #eee;
+          padding: 8px 16px;
+        }
+
+        button {
+          background-color: #111;
+          color: #fff;
+          margin-top: 40px;
+          @include ftB;
+        }
+      }
+
+      hr {
+        border: none;
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+      }
+
+      .sns_login {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        button {
+          width: 100%;
+          height: 56px;
+          border-radius: 8px;
+          @include ftB;
+          font-size: 17px;
+          background-color: #333;
+
+          &.twitter {
+            background-image: url("/img/ico/ico_twitter.png");
+            background-repeat: no-repeat;
+            background-position: 9px 3px;
+            background-size: 46px 46px;
+            background-color: #2c96d4;
+            color: #fff;
+          }
+          &.kakao {
+            background-color: #fee500;
+            color: #000;
+          }
+          &.google {
+            background-image: url("/img/ico/ico_google.png");
+            background-repeat: no-repeat;
+            background-position: 14px 11px;
+            background-size: 34px 34px;
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #ccc;
+          }
+        }
+      }
+
+      .other {
+        @include flex-center;
+        width: 80%;
+        margin: 12px auto 0;
+
+        li {
+          a {
+            font-size: 14px;
+          }
+
+          &::before {
+            @include iLayout;
+            width: 1px;
+            height: 8px;
+            background-color: #ccc;
+            margin: 0px 16px;
+          }
+
+          &:first-child {
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 }

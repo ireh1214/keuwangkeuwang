@@ -1,0 +1,46 @@
+.wrap {
+  width: 100vw;
+  min-height: 100vh;
+
+  header {
+    @include flex_between;
+    align-items: center;
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    height: 64px;
+
+    h1 {
+      width: 120px;
+      height: 40px;
+      background-color: #eee;
+      color: #333;
+      font-size: 30px;
+      @include flex_center;
+    }
+
+    ul {
+      @include flex_between;
+      align-items: center;
+      gap: 10px;
+      width: 140px;
+
+      li {
+        width: 50%;
+
+        &.profile {
+          width: 40px;
+          height: 40px;
+          margin-left: auto;
+          border-radius: 100%;
+          overflow: hidden;
+          cursor: pointer;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
