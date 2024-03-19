@@ -1,11 +1,10 @@
-import React from "react"
-import Link from "next/link"
+import React from "react";
+import Link from "next/link";
 
 export default function page() {
   return (
     <div className="login_wrap">
       <section className="login_container">
-        <div className="login_img"></div>
         <div className="inputBox">
           <input type="email" placeholder="아이디 입력창" />
           <input type="password" placeholder="패스워드 입력창" />
@@ -29,5 +28,5 @@ export default function page() {
         </ul>
       </section>
     </div>
-  )
+  );
 }

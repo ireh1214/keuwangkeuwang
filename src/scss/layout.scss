@@ -11,15 +11,15 @@
     height: 64px;
 
     h1 {
-      width: 120px;
-      height: 40px;
-      background-color: #eee;
-      color: #333;
-      font-size: 30px;
+      width: 139px;
+      height: 48px;
+      background: url("/img/main/logo.png") no-repeat center/contain;
+      @include txtHide;
       @include flex_center;
     }
 
     ul {
+      position: relative;
       @include flex_between;
       align-items: center;
       gap: 10px;
@@ -29,8 +29,8 @@
         width: 50%;
 
         &.profile {
-          width: 40px;
-          height: 40px;
+          width: 54px;
+          height: 54px;
           margin-left: auto;
           border-radius: 100%;
           overflow: hidden;
@@ -38,6 +38,50 @@
           img {
             width: 100%;
             height: 100%;
+          }
+        }
+      }
+    }
+
+    .user_nav {
+      position: absolute;
+      z-index: 10;
+      top: 50px;
+      left: -100px;
+      width: 160px;
+      height: 200px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: rgba(100, 100, 111, 0.05) 0px 7px 7px 0px;
+      background-color: #fff;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        height: 100%;
+
+        li {
+          width: 100%;
+          height: 50px;
+          border-bottom: 1px solid #ddd;
+
+          &:last-child {
+            border-bottom: 0;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            font-size: 15px;
+            padding-left: 20px;
+            width: 100%;
+            height: 100%;
+            transition: 0.3s ease;
+
+            &:hover {
+              background-color: #f5f5f5;
+            }
           }
         }
       }

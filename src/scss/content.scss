@@ -148,9 +148,10 @@
     .login_container {
       width: 440px;
       padding-top: 60px;
-
-      .login_img {
-        width: 100%;
+      &::before {
+        content: "";
+        display: block;
+        width: 440px;
         height: 400px;
         background: url("/img/main/sample2.png") no-repeat center / contain;
       }

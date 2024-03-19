@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import HomeLayout from "@/components/Layout/HomeLayout"
-import Link from "next/link"
+import React, { useState } from "react";
+import HomeLayout from "@/components/Layout/HomeLayout";
+import Link from "next/link";
 
 export default function Home(props) {
-  const [activeTab, setActiveTab] = useState("all")
+  const [activeTab, setActiveTab] = useState("all");
 
-  const handleTabClick = tab => {
-    setActiveTab(tab)
-  }
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
 
   return (
     <div className="home_wrap">
@@ -42,6 +42,7 @@ export default function Home(props) {
             {activeTab === "all" && (
               <section className="all_sec">
                 <h3>전체</h3>
+                <p>이다음할거... 탭 보여질때 페이드인 페이드아웃 0.3초</p>
 
                 <ul className="contentBox">
                   <li>
@@ -141,5 +142,5 @@ export default function Home(props) {
         </main>
       </HomeLayout>
     </div>
-  )
+  );
 }

@@ -1,29 +1,22 @@
-import Link from "next/link"
-import React, { useState } from "react"
+import Link from "next/Link";
 
 export default function Menu() {
-  const [isMenuOn, setMenuOn] = useState(false)
-
-  const handleClick = () => {
-    setMenuOn(prevState => !prevState)
-  }
-
   return (
-    <nav className={isMenuOn ? "on" : ""} onClick={handleClick}>
+    <nav className="user_nav">
       <ul>
         <li>
-          <Link href="/">Main</Link>
+          <Link href="/">내 글</Link>
         </li>
         <li>
-          <Link href="/document">공지사항</Link>
+          <Link href="/">내 정보</Link>
         </li>
         <li>
-          <Link href="/guide">자료실</Link>
+          <Link href="/">환경설정</Link>
         </li>
         <li>
-          <Link href="/">멤버란</Link>
+          <Link href="/login">로그인창</Link>
         </li>
       </ul>
     </nav>
-  )
+  );
 }
